@@ -1,0 +1,3 @@
+<!--pages/type/type.wxml-->
+<navigation-bar title="求片" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
+<text>pages/type/type.wxml</text>

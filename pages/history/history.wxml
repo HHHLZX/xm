@@ -1,0 +1,3 @@
+<!--pages/history/history.wxml-->
+<navigation-bar title="历史" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
+<text>pages/history/history.wxml</text>

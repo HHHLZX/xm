@@ -1,0 +1,60 @@
+/**index.wxss**/
+page {
+  background-color: #191825;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  /* background-color: gray; */
+  flex-grow: 1;
+}
+
+.img24 {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.img48 {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  height: 76rpx;
+  align-items: center;
+  margin-top: 34rpx;
+}
+.user-head{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+}
+
+.user-search {
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+}
+
+.search-view {
+  align-items: center;
+  background-color: #474651;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: row;
+  width: 520rpx;
+  height: 76rpx;
+}
+
+.search-icon {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.search-input{
+
+}
+.movie{
+
+}
