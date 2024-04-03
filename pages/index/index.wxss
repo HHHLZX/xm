@@ -56,5 +56,19 @@ page {
 
 }
 .movie{
-
+  width: 680rpx;
+  height: 446rpx;
+  margin: 0 auto;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.movie-head{
+  height: 48rpx;
+  background-color: blue;
+}
+.movie-body{
+  height: 368rpx;
+  background-color: green;
 }

@@ -9,5 +9,11 @@
     </view>
   </view>
   <view class="movie">
+    <view class="movie-head">
+      <text class="title">动漫推荐</text>
+      <a>更多</a>
+    </view>
+    <view class="movie-body">
+    </view>
   </view>
 </view>
