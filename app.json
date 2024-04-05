@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/history/history",
     "pages/message/message",
-    "pages/type/type"
+    "pages/type/type",
+    "pages/movieDetail/movieDetail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -11,8 +12,8 @@
   },
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor":"#ffffff",
-    "backgroundColor":"#221F42",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#221F42",
     "list": [
       {
         "pagePath": "pages/index/index",

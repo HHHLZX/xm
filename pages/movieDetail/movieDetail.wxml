@@ -1,0 +1,34 @@
+<!--pages/movieDetail/movieDetail.wxml-->
+<navigation-bar title="" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
+<view class="content">
+  <view class="search">
+    <image class="img48 user-head" src="/images/img-24.png" mode="" />
+  </view>
+  <view class="bace">
+    <view>
+      <image class="img" src="/images/movieExample2.png" mode="" />
+    </view>
+    <view class="desc">
+      <text class="name">变形金刚勇士崛起</text>
+      <text class="lan-year-long">英语·2021年·133分</text>
+      <view class="rating">
+        <image class="star" src="/images/star.png" mode="" />
+        <text class="score">(4.8/5.0)</text>
+      </view>
+      <text class="type">类型: 动作 / 科幻 / 恐怖 / 奇幻 </text>
+      <view class="but">
+        <button size="mini" class="play">
+          <view class="play-container">
+            <text class="but-text">立即播放</text>
+          </view>
+        </button>
+        <button size="mini" class="coll">
+          <view class="collect">
+            <image src="/images/love.png" mode="" />
+            <text class="but-text">收藏</text>
+          </view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

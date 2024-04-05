@@ -3,5 +3,18 @@
   "projectname": "movicesProject",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/movieDetail/movieDetail",
+          "pathName": "pages/movieDetail/movieDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
