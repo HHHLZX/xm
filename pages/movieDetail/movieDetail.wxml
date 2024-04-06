@@ -39,4 +39,51 @@
       <text class="movintrodetail">奇异博士斯蒂芬·斯特兰奇正在参加他的单恋对象克里斯汀·帕尔默的婚礼，这时外面的街道上出了乱子。一只巨大的章鱼怪正在跨越维度追逐名叫阿美莉卡·查陈先生到处...</text>
     </view>
   </view>
+  <view class="near-type">
+    <text class="movie-type">同类影视推荐</text>
+    <text class="one">即时影视，一次看个够！</text>
+    <view class="more-movie">
+      <view class="item">
+        <image class="more-movie-img" src="/images/more-movie-img-1.png" mode="" />
+        <text class="more-movie-name">请叫我总监</text>
+        <text class="more-movie-desc">新旧许文强再战上</text>
+      </view>
+      <view class="item">
+        <image class="more-movie-img" src="/images/more-movie-img-2.png" mode="" />
+        <text class="more-movie-name">刘光之下</text>
+        <text class="more-movie-desc">新旧许文强再战上</text>
+      </view>
+      <view class="item">
+        <image class="more-movie-img" src="/images/more-movie-img-3.png" mode="" />
+        <text class="more-movie-name">少帅</text>
+        <text class="more-movie-desc">新旧许文强再战上</text>
+      </view>
+    </view>
+    <image class="near-type-bacimg" src="/images/near-type.png" mode=""></image>
+    <view class="leftview"></view>
+    <view class="bottomview"></view>
+  </view>
+  <view class="movie">
+    <view class="movie-head">
+      <text class="title">猜你喜欢</text>
+      <a class="more">更多</a>
+    </view>
+    <view class="movie-body">
+      <view class="item">
+        <image class="movie-img" src="/images/movieExample2.png" mode="" />
+        <text class="movie-name">变形金刚勇士崛起</text>
+        <text class="movie-desc">49亿票房燃爆国漫</text>
+      </view>
+      <view class="item">
+        <image class="movie-img" src="/images/movieExample1.png" mode="" />
+        <text class="movie-name">巨齿鲨2：深渊</text>
+        <text class="movie-desc">49亿票房燃爆国漫</text>
+      </view>
+      <view class="item">
+        <image class="movie-img" src="/images/movieExample1.png" mode="" />
+        <text class="movie-name">巨齿鲨2：深渊</text>
+        <text class="movie-desc">49亿票房燃爆国漫</text>
+      </view>
+    </view>
+  </view>
 </view>

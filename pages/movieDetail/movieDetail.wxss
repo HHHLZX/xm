@@ -171,3 +171,183 @@ page {
   text-align: left;
   vertical-align: top;
 }
+
+.near-type {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+  /* 相对定位 */
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top: 20px;
+  width: 341px;
+  height: 201px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.near-type-bacimg {
+  position: absolute;
+  /* 绝对定位 */
+  top: 0px;
+  left: -38px;
+  right: -98px;
+  width: 431px;
+  height: 201px;
+}
+
+.leftview {
+  position: absolute;
+  z-index: 1;
+  /* 确保 text 在 image 的上层 */
+  width: 250px;
+  height: 201px;
+  border-radius: 4px;
+  background: linear-gradient(99.91deg, rgba(25, 24, 37, 1) 0%, rgba(25, 24, 37, 0.81) 31.25%, rgba(25, 24, 37, 0) 100%);
+
+}
+
+.bottomview {
+  margin-top: 146px;
+  position: absolute;
+  z-index: 1;
+  /* 确保 text 在 image 的上层 */
+  width: 341px;
+  height: 56px;
+  border-radius: 4px;
+  background: linear-gradient(99.91deg, rgba(25, 24, 37, 1) 0%, rgba(25, 24, 37, 0.81) 31.25%, rgba(25, 24, 37, 0) 100%);
+}
+
+.movie-type {
+  /* position: absolute; */
+  /* 可脱离文档流相对父元素定位 */
+  z-index: 2;
+  /* 确保 text 在 image 的上层 */
+  color: white;
+}
+
+.one {
+  z-index: 2;
+  /* 确保 text 在 image 的上层 */
+  color: white;
+}
+
+.more-movie {
+  z-index: 2;
+  /* 确保 text 在 image 的上层 */
+}
+
+.more-movie-img {
+  width: 180rpx;
+  height: 114rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.more-movie {
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-type {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 23px;
+}
+
+.one {
+  margin-left: 23px;
+  width: 132px;
+  height: 16px;
+  font-size: 12px;
+}
+
+.more-movie {
+  margin-left: 23px;
+  margin-right: 23px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-movie-name {
+  font-size: 11px;
+  color: white;
+}
+
+.more-movie-desc {
+  font-size: 11px;
+  color: white;
+}
+
+.movie {
+  width: 680rpx;
+  height: 446rpx;
+  margin: 0 auto;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.movie-head {
+  height: 48rpx;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-head .title {
+  color: rgba(255, 255, 255, 1);
+  font-size: 36rpx;
+}
+
+.movie-head .more {
+  color: rgba(255, 255, 255, 1);
+  font-size: 26rpx;
+  line-height: 48rpx;
+}
+
+.movie-body {
+  height: 368rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.movie-body .item {
+  width: 214rpx;
+  height: 368rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-body .item .movie-img {
+  margin-top: 10rpx;
+  width: 194rpx;
+  height: 276rpx;
+}
+
+.movie-body .item .movie-name {
+  color: rgba(255, 255, 255, 1);
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.movie-body .item .movie-desc {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20rpx;
+  margin-top: 4rpx;
+}
