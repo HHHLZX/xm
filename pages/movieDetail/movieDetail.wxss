@@ -98,11 +98,16 @@ page {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: left;
 }
 
 .play {
+  margin-left: 0rpx;
+  margin-right: 0rpx;
   width: 144rpx;
   height: 56rpx;
+  background-color: #7D12FF;
 }
 
 .collect {
@@ -118,17 +123,19 @@ page {
   align-items: center;
 }
 
-.play {
-  background-color: #7D12FF;
-}
-.play-container {  
-  display: flex; /* 设置为flex容器 */  
-  justify-content: center; /* 水平居中对齐子项 */  
-  align-items: center; /* 垂直居中对齐子项 */  
-  height: 100%; /* 确保容器高度与按钮高度一致 */  
+.play-container {
+  display: flex;
+  /* 设置为flex容器 */
+  justify-content: center;
+  /* 水平居中对齐子项 */
+  align-items: center;
+  /* 垂直居中对齐子项 */
+  height: 100%;
+  /* 确保容器高度与按钮高度一致 */
 }
 
 .coll {
+  margin-left: 20rpx;
   background-color: transparent;
   border: 1px solid white;
 }
@@ -136,4 +143,31 @@ page {
 .but-text {
   font-size: 26rpx;
   color: white;
+}
+
+.introduction {
+  margin-top: 10rpx;
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+}
+
+.movintro {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 21.22px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.introduct-detail {
+  margin-top: 24rpx;
+}
+
+.movintrodetail {
+  opacity: 0.5;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+  vertical-align: top;
 }

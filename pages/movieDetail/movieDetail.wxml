@@ -31,4 +31,12 @@
       </view>
     </view>
   </view>
+  <view class="introduction">
+    <view class="introduct-tittle">
+      <text class="movintro">电影简介</text>
+    </view>
+    <view class="introduct-detail">
+      <text class="movintrodetail">奇异博士斯蒂芬·斯特兰奇正在参加他的单恋对象克里斯汀·帕尔默的婚礼，这时外面的街道上出了乱子。一只巨大的章鱼怪正在跨越维度追逐名叫阿美莉卡·查陈先生到处...</text>
+    </view>
+  </view>
 </view>
