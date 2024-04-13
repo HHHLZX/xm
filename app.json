@@ -4,7 +4,8 @@
     "pages/history/history",
     "pages/message/message",
     "pages/type/type",
-    "pages/movieDetail/movieDetail"
+    "pages/movieDetail/movieDetail",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarTextStyle": "black",

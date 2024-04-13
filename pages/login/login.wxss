@@ -1,0 +1,129 @@
+/* pages/login/login.wxss */
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* 相对定位 */
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+page {
+  position: absolute;
+  /* background-color: #191825; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.back-img {
+  position: absolute;
+  /* 绝对定位 */
+  width: 100%;
+  height: 100%;
+}
+
+.back-zhezhao {
+  position: absolute;
+  width: 375px;
+  height: 826px;
+  transform: rotate(-90deg);
+  background: linear-gradient(90deg, rgba(23, 23, 23, 0) 10%, rgba(25, 24, 37, 1) 1.66%, rgba(26, 25, 38, 1) 0.63%, rgba(11, 11, 18, 0.9)100%, rgba(25, 24, 37, 0) 0%);
+  filter: blur(25px);
+}
+
+.max-view {
+  /* background-color: gray; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 626px;
+}
+
+.toptext {
+  /* background-color: red; */
+  margin-top: 174px;
+  margin-left: 33px;
+  width: 144px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31.82px;
+  font-style: MiSans;
+  color: white;
+}
+
+.sectext {
+  width: 208px;
+  height: 22px;
+  margin-left: 33px;
+  margin-top: 16px;
+  color: white;
+}
+
+.zh-view {
+  margin-left: 33px;
+  margin-top: 51px;
+  border-radius: 4px;
+  width: 310px;
+  height: 44px;
+  background-color: white;
+}
+
+.mm-view {
+  margin-left: 33px;
+  margin-top: 20px;
+  border-radius: 4px;
+  width: 310px;
+  height: 44px;
+  background-color: white;
+}
+
+.in {
+  /* background-color: gray; */
+  height: 44px;
+  width: 300px;
+  margin: auto;
+}
+
+.check {
+  margin-left: 33px;
+  margin-top: 20px;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.read {
+  color: rgba(255, 255, 255, 1);
+  margin-left: 5px;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.signin {
+  background-color: rgba(125, 18, 255, 1);
+  color: white;
+  margin-top: 60px;
+}
+
+.bottom {
+  justify-content: space-between;
+  /* background-color: gray; */
+  width: 291px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 42px;
+  margin-top: 40px;
+}
+
+.bottom text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
+}
