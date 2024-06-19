@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<navigation-bar title="注册" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
+<view class="content">
+  <image class="back-img" src="/images/back-img.png" mode="" />
+  <view class="back-zhezhao"></view>
+  <view class="max-view">
+    <text class="toptext">注册即时账号</text>
+    <text class="sectext">即时影视，给你最好的体验！</text>
+    <form>
+      <view class="zh-view"><input bindinput="inputUserPhoneChange" alue="{{userPhone}}" class="in" type="number" placeholder="账号" /></view>
+      <view class="mm-view"><input bindinput="inputUserPassword" value="{{userPassword}}" class="in" type="password" placeholder="密码" /></view>
+    </form>
+    <view class="check">
+      <image class="check-icon" src="/images/check.png" mode="" />
+      <text class="read">我已阅读 用户手册 和 隐私政策</text>
+    </view>
+    <button class="signin" size="default" bind:tap="reg">点击注册</button>
+  </view>
+  <view bindtap="navigateToLogin" class="bottom">
+    <text>账号登录</text>
+    <text>邮箱登录 </text>
+    <text>手机号登录</text>
+  </view>
+</view>

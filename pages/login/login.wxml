@@ -4,19 +4,21 @@
   <image class="back-img" src="/images/back-img.png" mode="" />
   <view class="back-zhezhao"></view>
   <view class="max-view">
-    <text class="toptext">注册即时账号</text>
+    <text class="toptext">登录即时账号</text>
     <text class="sectext">即时影视，给你最好的体验！</text>
-    <view class="zh-view"><input class="in" type="number" placeholder="账号" /></view>
-    <view class="mm-view"><input class="in" type="password" placeholder="密码" /></view>
+    <form>
+      <view class="zh-view"><input bindinput="inputUserPhoneChange" class="in" type="number" placeholder="账号" /></view>
+      <view class="mm-view"><input bindinput="inputUserPassword" class="in" type="password" placeholder="密码" /></view>
+    </form>
     <view class="check">
       <image class="check-icon" src="/images/check.png" mode="" />
       <text class="read">我已阅读 用户手册 和 隐私政策</text>
     </view>
-    <button class="signin" size="default">点击注册</button>
+    <button class="signin" size="default" bind:tap="login">点击登录</button>
   </view>
-  <view class="bottom">
-    <text>账号登录</text>
-    <text>邮箱登录 </text>
-    <text>手机号登录</text>
+  <view bindtap="navigateToReg" class="bottom">
+    <text>账号注册</text>
+    <text>邮箱注册 </text>
+    <text>手机号注册</text>
   </view>
 </view>

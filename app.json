@@ -5,7 +5,8 @@
     "pages/message/message",
     "pages/type/type",
     "pages/movieDetail/movieDetail",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/reg/reg"
   ],
   "window": {
     "navigationBarTextStyle": "black",

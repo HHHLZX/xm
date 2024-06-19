@@ -2,7 +2,9 @@
 <navigation-bar title="首页" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
 <view class="content">
   <view class="search">
-    <image class="img48 user-head" src="/images/img-24.png" mode="" />
+    <view bind:tap="navigateToLogin">
+      <image class="img48 user-head" src="/images/img-24.png" mode="" />
+    </view>
     <view class="search-view">
       <image class="img24 search-icon" src="/images/img48.png" mode="" />
       <input class="search-input" type="text" placeholder="蜘蛛侠远征" />

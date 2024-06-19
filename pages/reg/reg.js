@@ -1,11 +1,12 @@
-// pages/login/login.js
+// pages/reg/reg.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    "userPhone": "",
+    "userPassword": ""
   },
 
   /**
@@ -74,56 +75,48 @@ Page({
       userPassword: e.detail.value
     })
   },
-  navigateToReg: function () {
-    wx.redirectTo({
-      url: "/pages/reg/reg"
-    })
-    // 最多10层跳转4次
-    // wx.navigateTo({
-    //   url: '/pages/reg/reg' 
-    // });
-  },
-  login: function () {
+  reg: function () {
+    console.log("注册")
+
     // 获取数据， 手机号  密码
     let d = {
       "userPhone": this.data.userPhone,
       "userPassword": this.data.userPassword
     }
-    // console.log(d)
+    console.log(d)
+    // 数据校验
+    // 数据校验失败， 会以弹窗的方式， 提示用户
+    // 调用注册接口
     wx.request({
-      url: "http://127.0.0.1:8080/api/login",
+      url: 'http://localhost:8080/api/reg',
       method: "POST",
       data: d,
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      success: (res) => {
-        if (res.data.code == 200) {
-          console.log("登录成功" + res.data.code)
-          // wx.switchTab({
-          //   url: '/pages/index/index'
-          // })
-        }
-        if (res.data.code != 200) {
-          wx.showToast({
-            title: res.data.message,
-            icon: 'error',
-          })
+      success: function (res) {
+        console.log(res.data.code)
+        // code 0 表示成功
+        if (res.data.code != 0) {
+          // 跳转到登录页面
+          // 弹窗的方式， 显示错误原因
+          console.log("错误原因：" + res.data.message)
           return false
         }
-        //将请求的数据缓存起来
-        wx.setStorage({
-          key: 'cookie',
-          data: res.cookies,
-          success: function () {
-            console.log('缓存数据到本地');
-            console.log("cookie:" + wx.getStorageSync('cookie').toString())
-          }
-        });
-        wx.switchTab({
-          url: '/pages/index/index'
+        console.log("注册成功")
+        // 跳转到登录页面
+        wx.redirectTo({
+          url: "/pages/login/login"
         })
       }
     })
+  },
+  navigateToLogin: function () {
+    wx.redirectTo({
+      url: "/pages/login/login"
+    })
+    // wx.navigateTo({
+    //   url: '/pages/login/login'
+    // });
   }
 })
