@@ -1,1 +1,25 @@
 /* pages/message/message.wxss */
+/* pages/login/login.wxss */
+page{
+    height: 100%;
+    background: rgba(25, 24, 37, 1);
+
+    
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.w340-h120{
+    width: 680rpx;
+    height:240rpx;
+}
+
+.white-color{
+    color: white
+}

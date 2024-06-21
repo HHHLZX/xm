@@ -111,15 +111,25 @@ Page({
           })
           return false
         }
-        //将请求的数据缓存起来
+        // 将请求的数据缓存起来
         wx.setStorage({
           key: 'cookie',
           data: res.cookies,
           success: function () {
+            // console.log(res)
             console.log('缓存数据到本地');
             console.log("cookie:" + wx.getStorageSync('cookie').toString())
           }
         });
+        wx.setStorage({
+          key: 'userid',
+          data: res.data.userid,
+        });
+        // wx.setStorage({
+        //   key: 'resdata',
+        //   data: res.data,
+        // });
+        wx.setStorageSync('resdata', res.data)
         wx.switchTab({
           url: '/pages/index/index'
         })

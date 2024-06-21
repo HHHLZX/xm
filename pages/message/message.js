@@ -62,5 +62,43 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  inputtextChange: function (e) {
+    console.log(e)
+    this.setData({
+      content: e.detail.value
+    })
+  },
+  submit: function () {
+    let d = {
+      "userId": wx.getStorageSync('userid'),
+      "content": this.data.content
+    }
+    wx.request({
+      url: 'http://127.0.0.1:8080/api/messageBoards/create',
+      method: "POST",
+      data: d,
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: (res) => {
+        if (res.data.code == 0) {
+          console.log("留言成功" + res.data.code)
+          wx.showToast({
+            title: res.data.message,
+            icon: 'success',
+          })
+        }
+        if (res.data.code != 0) {
+          wx.showToast({
+            title: res.data.message,
+            icon: 'error',
+          })
+          return false
+        }
+      }
+    })
+    console.log("userid:" + wx.getStorageSync('userid'))
+    console.log("2")
   }
 })

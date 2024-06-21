@@ -1,3 +1,19 @@
 <!--pages/message/message.wxml-->
-<navigation-bar title="求片" back="{{true}}" color="#FFFFFF" background="#191825"></navigation-bar>
-<text>pages/message/message.wxml</text>
+<navigation-bar title="留言" back="{{false}}" color="#FFFFFF" background="#191825"></navigation-bar>
+
+<view class="container">
+  <view class="white-color" style="width: 680rpx; margin-top: 60rpx;">
+    把想看的影视留言
+  </view>
+  <view class="white-color" style="width: 680rpx; margin-top: 40rpx;">
+    即时影视，给你最好的体验！
+  </view>
+
+  <view class="w340-h120" style="margin-top: 60rpx;">
+    <textarea bindinput="inputtextChange" class="w340-h120" style="background-color: #fff;padding: 10rpx 0;" value="" placeholder="留言内容" />
+  </view>
+
+  <view class="w340-h120" style="margin-top: 40rpx;">
+    <button bind:tap="submit">点击提交</button>
+  </view>
+</view>
