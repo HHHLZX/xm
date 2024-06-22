@@ -3,7 +3,9 @@
 
 <view class="container">
   <view class="search">
-    <image class="img_48 user-head" src="/images/img-24.png" mode="" />
+    <view bind:tap="navigateToLogin">
+      <image class="img_48 user-head" src="/images/img-24.png" mode="" />
+    </view>
     <view class="search-view">
       <image class="img_24 search-icon" src="/images/img48.png" mode="" />
       <input class="search-input" type="text" placeholder="神奇蜘蛛侠远征" />
@@ -16,14 +18,20 @@
     <text class="title">动漫推荐</text>
     <a class="more" href="">更多</a>
   </view>
-  <view class="movie-body">
-
-    <view class="item" wx:for="{{movieList}}">
-      <image class="movie-img" src="{{item.movieImage}}" mode="" />
+  <view wx:for="{{groupedMovieList}}" wx:key="index" class="movie-body">
+    <view class="item" wx:for="{{item}}" wx:key="index">
+      <image class="movie-img" src="{{item.movieImage}}" mode="aspectFit" />
       <text class="movie-name">{{item.movieName}}</text>
-      <text class="movie-desc">{{item.MOvieDesc}}</text>
+      <!-- <text class="movie-desc">{{item.movieDesc}}</text> -->
     </view>
-
-
   </view>
+  <!-- <view class="movie-body">
+    <view wx:for="{{groupedMovieList}}" wx:key="index" class="movie-body">
+      <view class="item" wx:for="{{movieList}}" wx:key="index">
+        <image class=" movie-img" src="{{item.movieImage}}" mode="" />
+        <text class="movie-name">{{item.movieName}}</text>
+        <text class="movie-desc">{{item.MOvieDesc}}</text>
+      </view>
+    </view>
+  </view> -->
 </view>
