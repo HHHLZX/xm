@@ -84,12 +84,10 @@ Page({
     // });
   },
   login: function () {
-    // 获取数据， 手机号  密码
     let d = {
       "userPhone": this.data.userPhone,
       "userPassword": this.data.userPassword
     }
-    // console.log(d)
     wx.request({
       url: "http://127.0.0.1:8080/api/login",
       method: "POST",
@@ -99,41 +97,25 @@ Page({
       },
       success: (res) => {
         if (res.data.code == 200) {
-          console.log("登录成功" + res.data.code)
-          // wx.switchTab({
-          //   url: '/pages/index/index'
-          // })
-        }
-        if (res.data.code != 200) {
+          console.log("登录成功" + res.data.code);
+          // wx.setStorageSync('userid', res.data.userid);
+          
+          // 保存 Cookie
+          if (res.cookies && res.cookies.length > 0) {
+            wx.setStorageSync('cookies', res.cookies);
+          }
+  
+          wx.switchTab({
+            url: '/pages/index/index'
+          });
+        } else {
           wx.showToast({
             title: res.data.message,
             icon: 'error',
-          })
-          return false
+          });
         }
-        // 将请求的数据缓存起来
-        wx.setStorage({
-          key: 'cookie',
-          data: res.cookies,
-          success: function () {
-            // console.log(res)
-            console.log('缓存数据到本地');
-            console.log("cookie:" + wx.getStorageSync('cookie').toString())
-          }
-        });
-        wx.setStorage({
-          key: 'userid',
-          data: res.data.userid,
-        });
-        // wx.setStorage({
-        //   key: 'resdata',
-        //   data: res.data,
-        // });
-        wx.setStorageSync('resdata', res.data)
-        wx.switchTab({
-          url: '/pages/index/index'
-        })
       }
     })
   }
+  
 })

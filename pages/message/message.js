@@ -74,12 +74,15 @@ Page({
       "userId": wx.getStorageSync('userid'),
       "content": this.data.content
     }
+
+    let cookies = wx.getStorageSync('cookies');
     wx.request({
       url: 'http://127.0.0.1:8080/api/messageBoards/create',
       method: "POST",
       data: d,
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': cookies.join(';')
       },
       success: (res) => {
         if (res.data.code == 0) {
@@ -88,17 +91,13 @@ Page({
             title: res.data.message,
             icon: 'success',
           })
-        }
-        if (res.data.code != 0) {
+        } else {
           wx.showToast({
             title: res.data.message,
             icon: 'error',
           })
-          return false
         }
       }
     })
-    console.log("userid:" + wx.getStorageSync('userid'))
-    console.log("2")
   }
 })
