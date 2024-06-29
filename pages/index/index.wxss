@@ -8,6 +8,7 @@ page {
 .content{
     /* background-color: gray; */
     flex-grow: 1;
+    overflow-y: scroll;
 }
     
 .img_48{
@@ -51,19 +52,15 @@ page {
 }
 
 .movie{
-    width: 680rpx;
-    height: 446rpx;
-    
-    margin: 0 auto;
-    
+    width: 680rpx;    
+    margin: 0 auto;    
     /* background-color: yellow; */
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     margin-top: 50rpx;
-    margin-bottom: 50rpx;
+    /* margin-bottom: 50rpx; */
+    overflow-y: scroll;
 }
     .movie-head{
     height: 48rpx;
