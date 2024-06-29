@@ -64,7 +64,6 @@ Page({
 
   },
   inputUserPhoneChange: function (e) {
-    // console.log(e)
     this.setData({
       userPhone: e.detail.value
     })
@@ -78,10 +77,6 @@ Page({
     wx.redirectTo({
       url: "/pages/reg/reg"
     })
-    // 最多10层跳转4次
-    // wx.navigateTo({
-    //   url: '/pages/reg/reg' 
-    // });
   },
   login: function () {
     let d = {
@@ -97,14 +92,11 @@ Page({
       },
       success: (res) => {
         if (res.data.code == 200) {
-          console.log("登录成功" + res.data.code);
-          // wx.setStorageSync('userid', res.data.userid);
-          
+          console.log("登录成功" + res.data.code);      
           // 保存 Cookie
           if (res.cookies && res.cookies.length > 0) {
             wx.setStorageSync('cookies', res.cookies);
-          }
-  
+          }  
           wx.switchTab({
             url: '/pages/index/index'
           });

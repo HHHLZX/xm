@@ -76,8 +76,6 @@ Page({
     })
   },
   reg: function () {
-    console.log("注册")
-
     // 获取数据， 手机号  密码
     let d = {
       "userPhone": this.data.userPhone,
@@ -101,13 +99,23 @@ Page({
           // 跳转到登录页面
           // 弹窗的方式， 显示错误原因
           console.log("错误原因：" + res.data.message)
+          wx.showToast({
+            title: res.data.message,
+            icon: 'error',
+          });
           return false
         }
+        wx.showToast({
+          title: res.data.message,
+          icon: 'error',
+        });
+        setTimeout(function () {
+          // 这段代码将在 1 秒后执行  
+          wx.redirectTo({
+            url: "/pages/login/login"
+          })
+        }, 1000);
         console.log("注册成功")
-        // 跳转到登录页面
-        wx.redirectTo({
-          url: "/pages/login/login"
-        })
       }
     })
   },
@@ -115,8 +123,5 @@ Page({
     wx.redirectTo({
       url: "/pages/login/login"
     })
-    // wx.navigateTo({
-    //   url: '/pages/login/login'
-    // });
   }
 })
