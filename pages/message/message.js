@@ -70,18 +70,18 @@ Page({
     })
   },
   submit: function () {
-    if (wx.getStorageSync('userid') == "") {
+    let d = {
+      "userId": wx.getStorageSync('userid'),
+      "content": this.data.content
+    }
+    let cookies = wx.getStorageSync('cookies');
+    if (cookies == "") {
       wx.showToast({
         title: "请先登录",
         icon: 'error',
       })
       return false
     }
-    let d = {
-      "userId": wx.getStorageSync('userid'),
-      "content": this.data.content
-    }
-    let cookies = wx.getStorageSync('cookies');
     wx.request({
       url: 'http://127.0.0.1:8080/api/messageBoards/create',
       method: "POST",
