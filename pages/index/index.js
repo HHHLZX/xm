@@ -14,24 +14,19 @@ Page({
       method: "GET",
       success: function (res) {
         let movies = res.data.data;
+        console.log(movies)
         _this.setData({
           movieList: movies
         });
-
-        // 将分组逻辑移动到这里  
         let groupedMovieList = _this.data.movieList.reduce((accumulator, currentValue, currentIndex) => {
-          let chunkIndex = Math.floor(currentIndex / 3); // 计算当前项应该属于哪个分组  
-
+          let chunkIndex = Math.floor(currentIndex / 3);
+          // 计算当前项应该属于哪个分组  
           if (!accumulator[chunkIndex]) {
             accumulator[chunkIndex] = [];
           }
-
           accumulator[chunkIndex].push(currentValue);
-
           return accumulator;
         }, []);
-
-        // 更新页面数据  
         _this.setData({
           groupedMovieList: groupedMovieList
         });
@@ -40,11 +35,15 @@ Page({
   },
   // 跳转登录界面
   navigateToLogin: function () {
-    // wx.redirectTo({
-    //   url: "/pages/login/login"
-    // })
     wx.navigateTo({
       url: '/pages/login/login'
+    });
+  },
+  switchToDetail: function(evt) {
+    var id = evt.currentTarget.dataset.movieId; 
+    console.log(id);
+    wx.navigateTo({
+      url: '/pages/movieDetail/movieDetail?id=' + id 
     });
   }
 })

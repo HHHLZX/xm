@@ -6,16 +6,16 @@
   </view>
   <view class="bace">
     <view>
-      <image class="img" src="/images/movieExample2.png" mode="" />
+      <image class="img" src="{{movieDetail.movieImage}}" mode="" />
     </view>
     <view class="desc">
-      <text class="name">变形金刚勇士崛起</text>
-      <text class="lan-year-long">英语·2021年·133分</text>
+      <text class="name">{{movieDetail.movieName}}</text>
+      <text class="lan-year-long">{{movieDetail.movieLanguage}}·{{movieDetail.yearsDate}}年·{{movieDetail.movieTimeTotal}}分</text>
       <view class="rating">
         <image class="star" src="/images/star.png" mode="" />
-        <text class="score">(4.8/5.0)</text>
+        <text class="score">({{movieDetail.movieScore}}/5.0)</text>
       </view>
-      <text class="type">类型: 动作 / 科幻 / 恐怖 / 奇幻 </text>
+      <text class="type">类型: {{movieDetail.movieType}}</text>
       <view class="but">
         <button size="mini" class="play">
           <view class="play-container">
@@ -36,7 +36,7 @@
       <text class="movintro">电影简介</text>
     </view>
     <view class="introduct-detail">
-      <text class="movintrodetail">奇异博士斯蒂芬·斯特兰奇正在参加他的单恋对象克里斯汀·帕尔默的婚礼，这时外面的街道上出了乱子。一只巨大的章鱼怪正在跨越维度追逐名叫阿美莉卡·查陈先生到处...</text>
+      <text class="movintrodetail">{{movieDetail.movieDescfont}}...</text>
     </view>
   </view>
   <view class="near-type">

@@ -5,14 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    "movieDetail": {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log("电影详细")
+    console.log("options")
+    let _this = this
+    let movieId = options.id
+    let movieDeitalUrl = "http://localhost:8080/api/movie/detail?id=" + movieId
+    wx.request({
+      url: movieDeitalUrl,
+      method: "GET",
+      success: function (res) {
+        let d = res.data.data
+        d.yearsDate = d.movieDate.substring(0, 4);
+        d.movieDescfont = d.movieDesc.substring(0, 50);
+        _this.setData({
+          movieDetail: d
+        })
+      }
+    })
   },
 
   /**
